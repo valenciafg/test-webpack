@@ -1,6 +1,13 @@
+
+import React from 'react';
 import _ from 'lodash';
+import { render } from 'react-dom';
+import Main from './components/Main';
 import './styles/main.css';
 import Icon from './images/amores.jpg';
+
+render(<Main />, document.getElementById('app'));
+
 
 function component() {
   const element = document.createElement('div');
@@ -13,6 +20,7 @@ function component() {
   myIcon.src = Icon;
   element.appendChild(myIcon);
   console.log('hola, vamos por mas!!');
+  console.log(`Looks like we are in ${process.env.NODE_ENV} mode!`);
   return element;
 }
 
