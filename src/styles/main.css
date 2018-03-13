@@ -1,3 +1,7 @@
+body{
+  background-color: rgba(98, 0, 255, 0.582);
+  color: rgb(207, 70, 70);
+}
 .hello {
-  color: red;
+  color: rgb(255, 153, 0);
 }

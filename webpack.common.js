@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -8,10 +7,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname,'dist'),
     filename: '[name].bundle.js',
-    publicPath: '/dist/'
+    publicPath: 'dist/'
   }, 
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader','eslint-loader']
+      },
       {
         test: /\.css$/,
         use: [
@@ -27,11 +31,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Víctor Valencia - Fullstack Developer',
-      filename: '../index.html',
-      template: './src/index.html'
-    })
-  ]
+  plugins: []
 };
