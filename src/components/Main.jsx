@@ -1,5 +1,6 @@
 import React from 'react';
-
+import NavMenu from './NavMenu';
+import Container from './Container';
 /*
 export default class Main extends Component {
   render() {
@@ -13,6 +14,8 @@ export default class Main extends Component {
 */
 const Main = () => (
   <div>
+    <NavMenu />
+    <Container />
     App Component is Rendered!!
   </div>
 );

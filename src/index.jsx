@@ -2,6 +2,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { render } from 'react-dom';
+import 'semantic-ui-css/semantic.css';
 import Main from './components/Main';
 import './styles/main.css';
 import Icon from './images/amores.jpg';
