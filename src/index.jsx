@@ -1,15 +1,50 @@
 
 import React from 'react';
 import _ from 'lodash';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader'
 import 'semantic-ui-css/semantic.css';
 import Main from './components/Main';
 import './styles/main.css';
 import Icon from './images/amores.jpg';
 
-render(<Main />, document.getElementById('app'));
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('app'),
+  )
+}
+console.log('asdas');
+render(Main)
 
+// Webpack Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/Main', () => {
+    // if you are using harmony modules ({modules:false})
+    render(Main)
+    // in all other cases - re-require App manually
+    render(require('./components/Main'))
+  })
+}
 
+/*
+if(process.env.NODE_ENV === 'production'){}
+  render(<Main />, document.getElementById('app'));
+}else{
+  const render = Component => {
+    ReactDOM.render(
+      <AppContainer>
+        <Component />
+      </AppContainer>,
+      document.getElementById('root'),
+    )
+  }
+  
+  render(App)
+}
+*/
 function component() {
   const element = document.createElement('div');
 

@@ -9,6 +9,15 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: ['babel-loader','eslint-loader']
+            },
+        ]
+    },
     devtool: 'source-map',
     'plugins': [
         new CleanWebpackPlugin(['dist']),

@@ -7,6 +7,19 @@ const path = require('path');
     
 module.exports = merge( common, {
   mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: ['react-hot-loader/webpack','babel-loader','eslint-loader']
+      },
+    ]
+  },
+  entry: [
+    'webpack-dev-server/client?http://0.0.0.0:9000', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server',
+  ],
   devtool: 'eval-source-map',
   devServer: {
     contentBase: path.resolve(__dirname,'dist'),
