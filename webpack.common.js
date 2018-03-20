@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -11,6 +12,11 @@ module.exports = {
   }, 
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
+      },
       /*{
         test: /\.jsx?$/, // both .js and .jsx
         loader: 'eslint-loader',
@@ -26,6 +32,15 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'resolve-url-loader',
+          'sass-loader?sourceMap'
         ]
       },
       {
@@ -76,7 +91,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [],
+  plugins: [
+    new webpack.ProvidePlugin({ 
+      $: "jquery", 
+      jQuery: "jquery", 
+      "window.jQuery": "jquery" })
+  ],
   resolve: {
     extensions: ['.js', '.jsx']
   }

@@ -1,13 +1,14 @@
 
 import React from 'react';
-import _ from 'lodash';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader'
+import { render } from 'react-dom';
+// import { AppContainer } from 'react-hot-loader';
 import 'semantic-ui-css/semantic.css';
 import Main from './components/Main';
 import './styles/main.css';
-import Icon from './images/amores.jpg';
+import './styles/main.scss';
 
+render(<Main />, document.getElementById('app'));
+/*
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
@@ -28,8 +29,6 @@ if (module.hot) {
     render(require('./components/Main'))
   })
 }
-
-/*
 if(process.env.NODE_ENV === 'production'){}
   render(<Main />, document.getElementById('app'));
 }else{
@@ -41,23 +40,16 @@ if(process.env.NODE_ENV === 'production'){}
       document.getElementById('root'),
     )
   }
-  
   render(App)
-}
-*/
+} */
+/*
 function component() {
   const element = document.createElement('div');
 
   // Lodash, now imported by this script
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  const myIcon = new Image();
-  myIcon.src = Icon;
-  element.appendChild(myIcon);
-  console.log('hola, vamos por mas!!');
   console.log(`Looks like we are in ${process.env.NODE_ENV} mode!`);
   return element;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component()); */

@@ -1,0 +1,41 @@
+.ui.top.fixed.stackable.menu{
+  background: $hard_cyan;
+  .header.item{
+      color: $mustard;
+  }
+  .right.menu > .item{
+      color: $mustard;
+  }
+}
+
+.content{
+    & > h1{
+        color: $mustard;
+    }
+}
+.segment-content{
+    color: $cyan;
+    font-size: 1.5em;
+}
+
+.social_icons{
+    padding-top: 5% !important;
+    a{
+        margin-right: 5px;
+        .icon{
+            background: #FFF;
+            &.github{
+                color: #333;
+            }
+            &.linkedin{
+                color: #0077b5;
+            }
+            &.twitter{
+                color: #1da1f2;
+            }
+            &.mail{
+                color: #ffa930;;
+            }
+        }
+    }
+}

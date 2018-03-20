@@ -6,10 +6,14 @@
     "es6": true
   },
   "rules": {
-    "max-len": [1, 70, 2, {"ignoreComments": true}],
+    "max-len": [1, 70, 2, {
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true
+      }
+    ],
     "no-console": 0,
-    "linebreak-style": 0,
-    //"react/prefer-stateless-function": "off"
+    "linebreak-style": 0
   },
   "parserOptions": {
     "ecmaFeatures": {

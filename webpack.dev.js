@@ -7,7 +7,7 @@ const path = require('path');
     
 module.exports = merge( common, {
   mode: 'development',
-  module: {
+  /*module: {
     rules: [
       {
         test: /\.jsx?$/,
@@ -19,7 +19,7 @@ module.exports = merge( common, {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:9000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
-  ],
+  ],*/
   devtool: 'eval-source-map',
   devServer: {
     contentBase: path.resolve(__dirname,'dist'),

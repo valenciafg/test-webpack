@@ -1,0 +1,10 @@
+.knowledge{
+  background: $gradient, url("../../images/code.jpg") no-repeat fixed;
+  background-size: cover;
+  .recharts-legend-wrapper{
+    top: 100px;
+    .recharts-legend-item-text{
+      color: $mustard;
+    }
+  }
+}

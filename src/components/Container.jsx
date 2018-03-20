@@ -1,9 +1,14 @@
 import React from 'react';
+import MainSection from './MainSection';
+import KnowledgeSection from './KnowledgeSection';
+import PortafolioSection from './PortafolioSection';
 import ContactSection from './ContactSection';
 
 const Container = () => (
   <div>
-    <h1>Title</h1>
+    <MainSection />
+    <KnowledgeSection />
+    <PortafolioSection />
     <ContactSection />
   </div>
 );

@@ -16,7 +16,6 @@ const Main = () => (
   <div>
     <NavMenu />
     <Container />
-    App Component is Rendered!!
   </div>
 );
 
