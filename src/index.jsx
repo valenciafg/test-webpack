@@ -1,55 +1,9 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-// import { AppContainer } from 'react-hot-loader';
 import 'semantic-ui-css/semantic.css';
 import Main from './components/Main';
 import './styles/main.css';
 import './styles/main.scss';
 
 render(<Main />, document.getElementById('app'));
-/*
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('app'),
-  )
-}
-console.log('asdas');
-render(Main)
-
-// Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./components/Main', () => {
-    // if you are using harmony modules ({modules:false})
-    render(Main)
-    // in all other cases - re-require App manually
-    render(require('./components/Main'))
-  })
-}
-if(process.env.NODE_ENV === 'production'){}
-  render(<Main />, document.getElementById('app'));
-}else{
-  const render = Component => {
-    ReactDOM.render(
-      <AppContainer>
-        <Component />
-      </AppContainer>,
-      document.getElementById('root'),
-    )
-  }
-  render(App)
-} */
-/*
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  console.log(`Looks like we are in ${process.env.NODE_ENV} mode!`);
-  return element;
-}
-
-document.body.appendChild(component()); */

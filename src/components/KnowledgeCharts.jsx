@@ -1,10 +1,9 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react';
-import { RadialBarChart, RadialBar, Legend, Tooltip } from 'recharts';
+import { ResponsiveContainer, RadialBarChart, RadialBar, Legend, Tooltip } from 'recharts';
 import knowledge from '../data/knowledge';
 
 const KnowledgeCharts = () => (
-  <Container textAlign="center">
+  <ResponsiveContainer>
     <RadialBarChart
       width={830}
       height={450}
@@ -37,7 +36,7 @@ const KnowledgeCharts = () => (
       />
       <Tooltip />
     </RadialBarChart>
-  </Container>
+  </ResponsiveContainer>
 );
 
 export default KnowledgeCharts;
